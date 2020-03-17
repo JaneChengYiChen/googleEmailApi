@@ -1,7 +1,7 @@
 <?php
 use Symfony\Component\Yaml\Yaml;
 
-require __DIR__ . '/quickstart.php';
+require __DIR__ . '/emailClient.php';
 
 $client = getClient();
 $service = new Google_Service_Gmail($client);
