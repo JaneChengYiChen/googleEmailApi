@@ -37,5 +37,4 @@ foreach ($messages as $messages) {
 
         echo 'successful';
     }
-
 }

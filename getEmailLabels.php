@@ -15,4 +15,4 @@ foreach ($labels as $key => $value) {
     $labels_arr[$key]['id'][] = $value->id;
     $labels_arr[$key]['name'][] = $value->name;
 }
-return $labels_arr;
+echo var_dump($labels_arr);
