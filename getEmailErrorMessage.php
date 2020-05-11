@@ -40,7 +40,11 @@ foreach ($messages as $messages) {
     $details = $parts[2];
 
     $insertDataList = $details->parts;
-    $value = keyValue($insertDataList[0]->headers);
+    if (count($insertDataList) == 0) { //system sent mails itself
+        $value = keyValue($message->payload->headers);
+    } else {
+        $value = keyValue($insertDataList[0]->headers);
+    }
     $value['error_msg'] = $snippet;
 
     $data = insertData($value);
